@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <title>練習</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="{% static 'css/bulma.css' %}" rel="stylesheet">
+  <!-- 外部ファイルとしてJavaScriptファイルを読み込む -->
+  <script src="{% static 'js/chart.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+
+</head>
+
+<body>
+
+  <h1 class="lw">
+    <center>建玉数と日経の推移</center>
+  </h1>
+  <div style="display: flex;">
+    <div style="flex: 1;" >
+      <canvas id="myChart1" width="30" height="30"></canvas>
+    </div>
+    <div style="flex: 1;">
+      <canvas id="myChart2" width="30" height="30"></canvas>
+    </div>
+  </div>
+  <script>draw1()</script>
+  <script>draw2()</script>
+
+</body>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</html>
